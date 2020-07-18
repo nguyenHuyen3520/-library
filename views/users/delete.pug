@@ -1,0 +1,12 @@
+extends ../layouts/common.pug
+block content	
+	b name:
+		span &nbsp
+		span= user.name
+	br
+	b id:
+		span &nbsp
+		span= user.id
+	br
+	br
+	a(href="/users") Home

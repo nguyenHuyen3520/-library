@@ -1,0 +1,12 @@
+extends ../layouts/common.pug
+block content
+	h1 list Users
+	a(href="/users/create") new
+	form(action="/users/search", method="GET")
+		input(type="text" , name="q")
+		button Search
+	ul
+		each user in users
+			li
+				span= user.name
+				a(href="/users/delete") Delete

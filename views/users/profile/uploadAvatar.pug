@@ -1,0 +1,9 @@
+extends .../layouts/common
+block content
+  .panel-body
+  form(action='/users/profile/uploadAvatar', method='POST', enctype='multipart/form-data')
+	legend Upload file
+	.form-group
+	  label(for='') File
+	  input.form-control(type='file', name='files')
+	button.btn.btn-primary(type='submit') Submit

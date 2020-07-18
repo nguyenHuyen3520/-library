@@ -1,0 +1,22 @@
+extends ../layouts/common.pug
+block content
+	h1 Crate Account
+
+	if errors
+		each error in errors
+			.alert.alert-danger= error
+
+	form(action="/auth/create", method="POST")
+		.form-group
+			label(for="name") Name
+			input#name.form-control(type="text" , name="name" )
+		.form-group
+			label(for="email") Email
+			input#email.form-control(type="text" , name="emai" )
+		.form-group
+			label(for="password") Password
+			input#password.form-control(type="password" , name="password" )
+		.form-group
+			label(for="phone") Phone
+			input#phone.form-control(type="text" , name="phone")
+		button.btn.btn-primary Create
